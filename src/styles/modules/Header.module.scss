@@ -1,5 +1,26 @@
 @use '../utils' as *;
 
 .header {
-	background: red;
+	height: base(4);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.brand {
+	text-decoration: none;
+	p:last-of-type {
+		padding-left: base(1);
+	}
+}
+
+.menu_button {
+	$button-size: base(2.25);
+
+	display: grid;
+	place-items: center;
+	background: color(_foreground);
+	border-radius: 999px;
+	height: $button-size;
+	width: $button-size;
 }

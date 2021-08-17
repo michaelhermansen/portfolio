@@ -1,0 +1,11 @@
+@use '../utils' as *;
+
+.container {
+	margin: 0 auto;
+	padding: 0 base(1);
+	max-width: 1200px;
+	&.wide {
+		padding: 0 base(1);
+		max-width: 1400px;
+	}
+}

@@ -1,6 +1,14 @@
 @use './reset';
 @use './utils' as *;
 
-p {
-	max-width: 55ch;
+// * {
+// 	outline: 1px solid color(_accent, 0.1);
+// }
+
+.global__icon {
+	$icon-size: base(1);
+
+	width: $icon-size;
+	height: $icon-size;
+	fill: color(_text);
 }
