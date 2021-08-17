@@ -1,0 +1,50 @@
+@use '../utils' as *;
+
+.project_item a {
+	text-decoration: none;
+
+	&:hover h2 {
+		text-decoration: underline;
+	}
+}
+
+.thumbnail {
+	border-radius: corner(lg);
+	height: base(18);
+	object-position: 25% 25%;
+
+	@include wider-than(phone) {
+		height: base(18);
+	}
+
+	@include wider-than(tablet) {
+		height: base(22);
+	}
+}
+
+.info {
+	display: flex;
+	justify-content: space-between;
+	gap: base();
+	padding: base();
+
+	p {
+		@include font(small);
+		opacity: 0.5;
+	}
+
+	.date {
+		line-height: base(2);
+	}
+
+	div {
+		width: 0;
+		flex-grow: 1;
+
+		* {
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+	}
+}
