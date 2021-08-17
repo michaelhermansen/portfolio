@@ -1,0 +1,6 @@
+@use './reset';
+@use './utils' as *;
+
+p {
+	max-width: 55ch;
+}

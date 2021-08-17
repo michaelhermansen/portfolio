@@ -1,0 +1,46 @@
+@use './utils' as *;
+
+// Reset
+
+::selection {
+	background: color(_accent, 0.5);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	appearance: none;
+	border: none;
+	list-style: none;
+	background: none;
+	text-decoration: inherit;
+
+	color: inherit;
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+	line-height: inherit;
+}
+
+html,
+body {
+	background: color(_background);
+	color: color(_text);
+	@include font(_body, _normal, _regular);
+}
+
+a {
+	text-decoration: underline;
+}
+
+pre,
+code {
+	@include font(_mono, _normal, _regular);
+}
+
+img {
+	display: block;
+	width: 100%;
+	object-fit: cover;
+}

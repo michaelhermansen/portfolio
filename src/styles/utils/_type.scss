@@ -1,0 +1,40 @@
+// Typografi
+
+$line-height: 1.4;
+
+$font-families: (
+	_body: (
+		"Inter",
+		sans-serif,
+	),
+	_heading: (
+		"Inter",
+		sans-serif,
+	),
+	_mono: monospace,
+);
+
+$font-sizes: (
+	_small: 16px,
+	_normal: 22px,
+	_large: 36px,
+	_xlarge: 54px,
+);
+
+$font-weights: (
+	_regular: 400,
+	_medium: 600,
+	_bold: 900,
+);
+
+@function base($multiplier) {
+	$base-unit: map-get($font-sizes, _normal) * $line-height;
+	@return $base-unit * $multiplier;
+}
+
+@mixin font($family, $size, $weight: _regular) {
+	font-family: map-get($font-families, $family);
+	font-size: map-get($font-sizes, $size);
+	font-weight: map-get($font-weights, $weight);
+	line-height: $line-height;
+}

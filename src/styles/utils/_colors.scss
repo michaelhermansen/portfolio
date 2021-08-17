@@ -1,0 +1,20 @@
+@use 'sass:color';
+
+// Farger
+
+$colors: (
+	_text: #e7e7f5,
+	_foreground: #373741,
+	_background: #151518,
+	_accent: #00ff95,
+);
+
+@function color($color, $opacity: 1) {
+	@if ($opacity < 0 or $opacity > 1) {
+		@error '$opacity må være et tall mellom 0 og 1,';
+	}
+
+	$alpha-adjust: (1 - $opacity) * -1;
+
+	@return color.adjust(map-get($colors, $color), $alpha: $alpha-adjust);
+}

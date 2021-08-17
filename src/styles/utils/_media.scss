@@ -1,0 +1,16 @@
+// Størrelser
+
+$breakpoints: (
+	_phone: 450px,
+	_tablet-portrait: 800px,
+	_tablet-landscape: 1100px,
+	_laptop: 1400px,
+);
+
+@mixin if-wider-than($breakpoint) {
+	$bp: map-get($breakpoints, $breakpoint);
+
+	@media only screen and (min-width: $bp) {
+		@content;
+	}
+}
