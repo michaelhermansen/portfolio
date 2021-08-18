@@ -26,7 +26,7 @@ interface ProjectLinkProps {
 }
 
 const ProjectLink: React.FC<ProjectLinkProps> = ({ project }) => {
-	const projectMonth = shortString(project.month, 3).toLocaleLowerCase();
+	const projectMonth = shortString(project.month, 3).toLowerCase();
 
 	return (
 		<motion.li
@@ -39,7 +39,7 @@ const ProjectLink: React.FC<ProjectLinkProps> = ({ project }) => {
 						className={classes.thumbnail}
 						src={project.thumbnail.fields.file.url}
 						alt={project.thumbnail.fields.description}
-						width={900}
+						width={800}
 					/>
 					<div className={classes.info}>
 						<div>

@@ -1,11 +1,14 @@
 @use '../utils' as *;
 
 .container {
-	margin: 0 auto;
+	max-width: 1300px;
 	padding: 0 base(1);
-	max-width: 1200px;
+	margin: 0 auto;
 	&.wide {
+		max-width: 1500px;
 		padding: 0 base(0.5);
-		max-width: 1400px;
+		@include if-wider-than(_phone) {
+			padding: 0 base(1);
+		}
 	}
 }

@@ -1,0 +1,15 @@
+@use '../utils' as *;
+
+.project_grid {
+	display: grid;
+	gap: base(1);
+	grid-template-columns: 1fr;
+
+	@include if-wider-than(_tablet-portrait) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	@include if-wider-than(_tablet-landscape) {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}

@@ -1,0 +1,53 @@
+@use '../utils' as *;
+
+.thumbnail {
+	border-radius: base(1);
+	object-position: 25% 25%;
+	margin-bottom: base(2);
+	aspect-ratio: 4/3;
+
+	@include if-wider-than(_tablet-landscape) {
+		aspect-ratio: 2/1;
+	}
+}
+
+.info {
+	@include font(_body, _normal);
+	color: color(_text, 0.5);
+	padding: {
+		top: base(0.5);
+		bottom: base(1.5);
+	}
+	@include if-wider-than(_phone) {
+		@include font(_body, _normal);
+	}
+}
+
+.title {
+	@include font(_heading, _large, _medium);
+	max-width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-left: -1px;
+	@include if-wider-than(_phone) {
+		@include font(_heading, _xlarge, _medium);
+	}
+}
+
+.blurb {
+	@include font(_body, _normal);
+	padding-bottom: base(3);
+	@include if-wider-than(_phone) {
+		@include font(_body, _medium);
+	}
+}
+
+.images {
+	display: grid;
+	gap: base(1);
+	padding-bottom: base(3);
+
+	img {
+		border-radius: base(1);
+	}
+}

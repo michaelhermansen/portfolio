@@ -1,6 +1,6 @@
 // Typografi
 
-$line-height: 1.2;
+$line-height: 1.3;
 
 $font-families: (
 	_body: (
@@ -17,14 +17,14 @@ $font-families: (
 $font-sizes: (
 	_normal: 18px,
 	_medium: 22px,
-	_large: 36px,
+	_large: 34px,
 	_xlarge: 54px,
 );
 
 $font-weights: (
 	_regular: 400,
 	_medium: 600,
-	_bold: 900,
+	_bold: 800,
 );
 
 @function base($multiplier) {

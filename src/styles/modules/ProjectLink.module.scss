@@ -9,33 +9,24 @@
 }
 
 .thumbnail {
-	border-radius: corner(lg);
-	height: base(18);
+	border-radius: base(1);
 	object-position: 25% 25%;
+	aspect-ratio: 4/3;
 
-	@include wider-than(phone) {
-		height: base(18);
-	}
-
-	@include wider-than(tablet) {
-		height: base(22);
+	// aspect-ratio fallback
+	@supports not (aspect-ratio: 4/3) {
+		height: base(13);
+		@include if-wider-than(_phone) {
+			height: base(15);
+		}
 	}
 }
 
 .info {
 	display: flex;
 	justify-content: space-between;
-	gap: base();
-	padding: base();
-
-	p {
-		@include font(small);
-		opacity: 0.5;
-	}
-
-	.date {
-		line-height: base(2);
-	}
+	gap: base(1);
+	padding: base(1) base(0.5);
 
 	div {
 		width: 0;
@@ -46,5 +37,13 @@
 			text-overflow: ellipsis;
 			white-space: nowrap;
 		}
+	}
+
+	p {
+		color: color(_text, 0.5);
+	}
+
+	.date {
+		padding-bottom: base(1);
 	}
 }
