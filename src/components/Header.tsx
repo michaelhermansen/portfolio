@@ -1,12 +1,45 @@
 import classes from "@modules/Header.module.scss";
 import Link from "next/link";
 import Container from "./Container";
+import Menu from "./Menu";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { useRouter } from "next/dist/client/router";
+import { useEffect, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+
+const menuAnimation = {
+	hidden: {
+		opacity: 0,
+		y: -20,
+		height: "50%",
+		transition: {
+			duration: 0.2,
+			ease: "easeIn",
+		},
+	},
+	visible: {
+		opacity: 1,
+		y: 0,
+		height: "auto",
+		transition: {
+			duration: 0.4,
+			ease: "easeOut",
+		},
+	},
+};
 
 const Header = () => {
 	const router = useRouter();
 	const isIndex = router.pathname === "/";
+
+	const [menuIsOpen, setMenuIsOpen] = useState(false);
+
+	useEffect(() => {
+		const closeMenu = () => menuIsOpen && setMenuIsOpen(false);
+
+		document.addEventListener("click", closeMenu);
+		return () => document.removeEventListener("click", closeMenu);
+	}, [menuIsOpen]);
 
 	return (
 		<Container>
@@ -18,9 +51,31 @@ const Header = () => {
 						<p>designer og utvikler</p>
 					</a>
 				</Link>
-				<button className={classes.menu_button}>
-					<MdKeyboardArrowDown className="global__icon" />
+				<button
+					className={classes.menu_button}
+					onClick={() => setMenuIsOpen(current => !current)}
+				>
+					<MdKeyboardArrowDown
+						className={[
+							"global__icon",
+							classes.menu_icon,
+							menuIsOpen && classes.is_open,
+						].join(" ")}
+					/>
 				</button>
+				<AnimatePresence>
+					{menuIsOpen && (
+						<motion.div
+							className={classes.menu_wrapper}
+							variants={menuAnimation}
+							initial="hidden"
+							animate="visible"
+							exit="hidden"
+						>
+							<Menu />
+						</motion.div>
+					)}
+				</AnimatePresence>
 			</header>
 		</Container>
 	);

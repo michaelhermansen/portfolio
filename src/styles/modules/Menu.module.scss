@@ -1,0 +1,32 @@
+@use '../utils' as *;
+
+.menu_list {
+	background: color(_foreground);
+	width: base(10);
+	border-radius: base(1);
+	overflow: hidden;
+}
+
+.menu_item {
+	box-shadow: 0 1px 0 color(_text, 0.1);
+	&:last-of-type {
+		box-shadow: none;
+	}
+
+	a {
+		text-decoration: none;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: base(1);
+		transition: background-color 0.2s;
+
+		&:hover {
+			background: color(_text, 0.05);
+		}
+
+		svg {
+			opacity: 0.5;
+		}
+	}
+}

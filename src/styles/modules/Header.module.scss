@@ -6,6 +6,7 @@
 	align-items: center;
 	justify-content: space-between;
 	margin-bottom: base(1);
+	position: relative;
 }
 
 .brand {
@@ -20,8 +21,26 @@
 
 	display: grid;
 	place-items: center;
-	background: color(_foreground);
 	border-radius: 999px;
 	height: $button-size;
 	width: $button-size;
+	background: color(_foreground);
+}
+
+.menu_icon {
+	transform: rotate(0deg);
+	transition: transform 0.2s;
+
+	&.is_open {
+		transform: rotate(180deg);
+	}
+}
+
+.menu_wrapper {
+	position: absolute;
+	right: 0;
+	top: base(4);
+	z-index: 999;
+	overflow: hidden;
+	border-radius: base(1);
 }
