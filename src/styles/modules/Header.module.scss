@@ -5,7 +5,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	margin-bottom: base(2);
+	margin-bottom: base(1);
 }
 
 .brand {
@@ -16,7 +16,7 @@
 }
 
 .menu_button {
-	$button-size: base(2.25);
+	$button-size: base(2);
 
 	display: grid;
 	place-items: center;
