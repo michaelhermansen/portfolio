@@ -2,7 +2,7 @@ import classes from "@modules/Header.module.scss";
 import Link from "next/link";
 import Container from "./Container";
 import Menu from "./Menu";
-import { MdKeyboardArrowDown } from "react-icons/md";
+import { MdKeyboardArrowDown as Arrow } from "react-icons/md";
 import { useRouter } from "next/dist/client/router";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
@@ -11,7 +11,7 @@ const menuAnimation = {
 	hidden: {
 		opacity: 0,
 		y: -20,
-		height: "50%",
+		height: 40,
 		transition: {
 			duration: 0.2,
 			ease: "easeIn",
@@ -22,7 +22,7 @@ const menuAnimation = {
 		y: 0,
 		height: "auto",
 		transition: {
-			duration: 0.4,
+			duration: 0.3,
 			ease: "easeOut",
 		},
 	},
@@ -55,7 +55,7 @@ const Header = () => {
 					className={classes.menu_button}
 					onClick={() => setMenuIsOpen(current => !current)}
 				>
-					<MdKeyboardArrowDown
+					<Arrow
 						className={[
 							"global__icon",
 							classes.menu_icon,

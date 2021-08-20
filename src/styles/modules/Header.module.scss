@@ -28,11 +28,12 @@
 }
 
 .menu_icon {
-	transform: rotate(0deg);
+	transform: rotate(0deg) translateY(1px);
 	transition: transform 0.2s;
+	transform-origin: center;
 
 	&.is_open {
-		transform: rotate(180deg);
+		transform: rotate(180deg) translateY(1px);
 	}
 }
 

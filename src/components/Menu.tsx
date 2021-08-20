@@ -1,7 +1,6 @@
 import classes from "@modules/Menu.module.scss";
 import Link from "next/link";
 import menuItems from "fixtures/menuItems";
-import { motion } from "framer-motion";
 import {
 	MdKeyboardArrowRight as ArrowRight,
 	MdOpenInNew as NewTab,
@@ -10,9 +9,9 @@ import {
 const Menu = () => {
 	return (
 		<nav>
-			<motion.ul className={classes.menu_list}>
+			<ul className={classes.menu_list}>
 				{menuItems.map((item, i) => (
-					<motion.li key={i} className={classes.menu_item}>
+					<li key={i} className={classes.menu_item}>
 						<Link href={item.url}>
 							<a target={item.newTab ? "_blank" : "_self"}>
 								{item.label}
@@ -23,9 +22,9 @@ const Menu = () => {
 								)}
 							</a>
 						</Link>
-					</motion.li>
+					</li>
 				))}
-			</motion.ul>
+			</ul>
 		</nav>
 	);
 };
