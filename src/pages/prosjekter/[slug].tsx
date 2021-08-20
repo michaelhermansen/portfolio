@@ -5,12 +5,17 @@ import Layout from "@components/Layout";
 import getProjects from "@lib/getProjects";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { IProjectFields } from "types/contentful";
+import formatProjectLink from "@lib/formatProjectLink";
 
 interface ProjectTemplateProps {
 	project: IProjectFields;
 }
 
 const ProjectTemplate: React.FC<ProjectTemplateProps> = ({ project }) => {
+	// project.link er en string med formatet *Tittel* [*URL*].
+	// projectLink er et objekt med verdier for "title" og "url".
+	const projectLink = project.link && formatProjectLink(project.link);
+
 	return (
 		<Layout title={project.title} description={project.blurb}>
 			<Container wide>
@@ -31,6 +36,18 @@ const ProjectTemplate: React.FC<ProjectTemplateProps> = ({ project }) => {
               ${project.year}
             `}
 					</p>
+					<div className={classes.links}>
+						{projectLink && (
+							<a href={projectLink.url} target="_blank">
+								{projectLink.title}
+							</a>
+						)}
+						{project.gitHubLink && (
+							<a href={project.gitHubLink} target="_blank">
+								GitHub
+							</a>
+						)}
+					</div>
 					<p className={classes.blurb}>{project.blurb}</p>
 				</div>
 				{project.images && (
