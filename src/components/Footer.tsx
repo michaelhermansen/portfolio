@@ -2,6 +2,7 @@ import classes from "@modules/Footer.module.scss";
 import Container from "./Container";
 import menuItems from "fixtures/menuItems";
 import Link from "next/link";
+import ToTopButton from "./ToTopButton";
 
 const currentYear = new Date().getFullYear();
 
@@ -20,6 +21,7 @@ const Footer = () => {
 							</Link>
 						))}
 					</div>
+					<ToTopButton />
 				</div>
 			</Container>
 		</footer>

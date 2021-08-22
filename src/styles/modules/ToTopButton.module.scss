@@ -1,0 +1,12 @@
+@use '../utils' as *;
+
+.toTopButton {
+	display: flex;
+	align-items: center;
+	gap: base(0.25);
+	height: base(2);
+	padding: 0 base(1);
+	background: color(_foreground);
+	border-radius: 999px;
+	color: color(_text);
+}
