@@ -8,10 +8,17 @@
 	height: base(5);
 	margin-top: base(4);
 	box-shadow: 0 -1px 0 color(_text, 0.1);
-	color: color(_text, 0.5);
 
 	.links {
 		display: flex;
 		gap: base(1);
+
+		a {
+			color: color(_text, 0.5);
+			transition: color 0.2s;
+			&:hover {
+				color: color(_text);
+			}
+		}
 	}
 }

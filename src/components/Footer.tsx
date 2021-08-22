@@ -11,7 +11,6 @@ const Footer = () => {
 		<footer>
 			<Container wide>
 				<div className={classes.content}>
-					<p>Michael Hermansen, {currentYear}</p>
 					<div className={classes.links}>
 						{menuItems.map((item, i) => (
 							<Link href={item.url} key={i}>
