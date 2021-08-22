@@ -2,12 +2,18 @@
 
 .content {
 	display: flex;
+	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
-	padding: 0 base(0.5);
-	height: base(5);
+	gap: base(2);
+	padding: base(3) base(0.5);
 	margin-top: base(4);
 	box-shadow: 0 -1px 0 color(_text, 0.1);
+
+	@include if-wider-than(_tablet-portrait) {
+		flex-direction: row;
+		padding: base(2) base(0.5);
+	}
 
 	.links {
 		display: flex;

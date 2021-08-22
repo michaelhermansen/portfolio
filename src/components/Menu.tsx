@@ -13,7 +13,10 @@ const Menu = () => {
 				{menuItems.map((item, i) => (
 					<li key={i} className={classes.menu_item}>
 						<Link href={item.url}>
-							<a target={item.newTab ? "_blank" : "_self"}>
+							<a
+								target={item.newTab ? "_blank" : "_self"}
+								rel="noreferrer"
+							>
 								{item.label}
 								{item.newTab ? (
 									<NewTab className="global__icon" />

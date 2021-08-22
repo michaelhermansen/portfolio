@@ -14,7 +14,10 @@ const Footer = () => {
 					<div className={classes.links}>
 						{menuItems.map((item, i) => (
 							<Link href={item.url} key={i}>
-								<a target={item.newTab ? "_blank" : "_self"}>
+								<a
+									target={item.newTab ? "_blank" : "_self"}
+									rel="noreferrer"
+								>
 									{item.label}
 								</a>
 							</Link>

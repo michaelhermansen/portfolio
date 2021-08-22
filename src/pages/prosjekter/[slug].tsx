@@ -39,13 +39,21 @@ const ProjectTemplate: React.FC<ProjectTemplateProps> = ({ project }) => {
 					</p>
 					<div className={classes.links}>
 						{projectLink && (
-							<a href={projectLink.url} target="_blank">
+							<a
+								href={projectLink.url}
+								target="_blank"
+								rel="noreferrer"
+							>
 								{projectLink.title}
 								<NewTab />
 							</a>
 						)}
 						{project.gitHubLink && (
-							<a href={project.gitHubLink} target="_blank">
+							<a
+								href={project.gitHubLink}
+								target="_blank"
+								rel="noreferrer"
+							>
 								GitHub
 								<NewTab />
 							</a>

@@ -1,9 +1,7 @@
 @use './reset';
 @use './utils' as *;
 
-// * {
-// 	outline: 1px solid color(_accent, 0.1);
-// }
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap");
 
 .global__icon {
 	$icon-size: base(1);
