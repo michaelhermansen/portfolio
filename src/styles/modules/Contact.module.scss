@@ -1,0 +1,10 @@
+@use '../utils' as *;
+
+.page_title {
+	@include font(_heading, _xlarge, _bold);
+	margin-bottom: base(1);
+}
+
+.contact_info_list {
+	@include font(_body, _large);
+}
