@@ -11,6 +11,7 @@
 
 .brand {
 	text-decoration: none;
+	line-height: 1.2;
 	p:last-of-type {
 		padding-left: base(1);
 	}
@@ -44,4 +45,5 @@
 	z-index: 999;
 	overflow: hidden;
 	border-radius: base(1);
+	width: base(10);
 }

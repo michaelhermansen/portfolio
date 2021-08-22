@@ -12,12 +12,12 @@ const menuItems: MenuItem[] = [
 	},
 	{
 		label: "LinkedIn",
-		url: "https://linkedin.com",
+		url: "https://www.linkedin.com/in/michael-hermansen",
 		newTab: true,
 	},
 	{
 		label: "GitHub",
-		url: "https://github.com",
+		url: "https://github.com/michaelhermansen",
 		newTab: true,
 	},
 ];

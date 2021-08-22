@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Footer from "./Footer";
 import Header from "./Header";
 import PageTransition from "./PageTransition";
 
@@ -18,6 +19,7 @@ const Layout: React.FC<LayoutProps> = ({ title, description, children }) => {
 			<Header />
 			<PageTransition>
 				<main>{children}</main>
+				<Footer />
 			</PageTransition>
 		</>
 	);

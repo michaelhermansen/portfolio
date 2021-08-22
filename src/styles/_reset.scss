@@ -33,6 +33,10 @@ body {
 a {
 	text-decoration: underline;
 	text-decoration-skip-ink: all;
+
+	&:hover {
+		text-decoration: none;
+	}
 }
 
 pre,

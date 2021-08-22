@@ -3,9 +3,10 @@ import CmsImage from "@components/CmsImage";
 import Container from "@components/Container";
 import Layout from "@components/Layout";
 import getProjects from "@lib/getProjects";
+import formatProjectLink from "@lib/formatProjectLink";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { IProjectFields } from "types/contentful";
-import formatProjectLink from "@lib/formatProjectLink";
+import { MdOpenInNew as NewTab } from "react-icons/md";
 
 interface ProjectTemplateProps {
 	project: IProjectFields;
@@ -40,11 +41,13 @@ const ProjectTemplate: React.FC<ProjectTemplateProps> = ({ project }) => {
 						{projectLink && (
 							<a href={projectLink.url} target="_blank">
 								{projectLink.title}
+								<NewTab />
 							</a>
 						)}
 						{project.gitHubLink && (
 							<a href={project.gitHubLink} target="_blank">
 								GitHub
+								<NewTab />
 							</a>
 						)}
 					</div>

@@ -35,11 +35,13 @@
 .links {
 	@include font(_body, _normal);
 	a {
+		display: inline-flex;
+		gap: base(0.5);
+		align-items: center;
 		text-decoration: none;
 		box-shadow: 0 0 0 1px color(_text);
 		border-radius: 999px;
-		display: inline-block;
-		padding: base(0.5) base(1.25);
+		padding: base(0.5) base(1);
 		opacity: 0.75;
 		transition: opacity 0.2s;
 
