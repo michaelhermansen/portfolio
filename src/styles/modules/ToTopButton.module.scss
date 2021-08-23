@@ -6,7 +6,12 @@
 	gap: base(0.25);
 	height: base(2);
 	padding: 0 base(1);
-	background: color(_foreground);
 	border-radius: 999px;
 	white-space: nowrap;
+	background: color(_foreground, 0.75);
+	transition: background-color 0.2s;
+
+	&:hover {
+		background: color(_foreground);
+	}
 }

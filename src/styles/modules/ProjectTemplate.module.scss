@@ -39,11 +39,10 @@
 		gap: base(0.5);
 		align-items: center;
 		text-decoration: none;
-		box-shadow: 0 0 0 1px color(_text);
 		border-radius: 999px;
 		padding: base(0.5) base(1);
-		opacity: 0.75;
-		transition: opacity 0.2s;
+		background: color(_foreground, 0.75);
+		transition: background-color 0.2s;
 
 		margin: {
 			bottom: base(0.5);
@@ -57,7 +56,7 @@
 		}
 
 		&:hover {
-			opacity: 1;
+			background: color(_foreground);
 		}
 	}
 }

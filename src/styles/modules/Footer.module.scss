@@ -8,7 +8,7 @@
 	gap: base(2);
 	padding: base(3) base(0.5);
 	margin-top: base(4);
-	box-shadow: 0 -1px 0 color(_text, 0.1);
+	box-shadow: 0 -1px 0 color(_text, 0.05);
 
 	@include if-wider-than(_tablet-portrait) {
 		flex-direction: row;

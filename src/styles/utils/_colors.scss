@@ -9,6 +9,14 @@ $colors: (
 	_accent: #00ff95,
 );
 
+// alt. tema
+// $colors: (
+// 	_text: #1a1a1d,
+// 	_foreground: #e8e8f0,
+// 	_background: #ffffff,
+// 	_accent: #00ff95,
+// );
+
 @function color($color, $opacity: 1) {
 	@if ($opacity < 0 or $opacity > 1) {
 		@error '$opacity må være et tall mellom 0 og 1,';

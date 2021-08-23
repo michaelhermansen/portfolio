@@ -25,7 +25,12 @@
 	border-radius: 999px;
 	height: $button-size;
 	width: $button-size;
-	background: color(_foreground);
+	background: color(_foreground, 0.75);
+	transition: background-color 0.2s;
+
+	&:hover {
+		background: color(_foreground);
+	}
 }
 
 .menu_icon {
