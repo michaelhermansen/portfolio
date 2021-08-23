@@ -7,12 +7,18 @@ import formatProjectLink from "@lib/formatProjectLink";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { IProjectFields } from "types/contentful";
 import { MdOpenInNew as NewTab } from "react-icons/md";
+import sortProjects from "@lib/sortProjects";
+import NextProjectLink from "@components/NextProjectLink";
 
 interface ProjectTemplateProps {
 	project: IProjectFields;
+	nextProject: IProjectFields;
 }
 
-const ProjectTemplate: React.FC<ProjectTemplateProps> = ({ project }) => {
+const ProjectTemplate: React.FC<ProjectTemplateProps> = ({
+	project,
+	nextProject,
+}) => {
 	// project.link er en string med formatet *Tittel* [*URL*].
 	// projectLink er et objekt med verdier for "title" og "url".
 	const projectLink = project.link && formatProjectLink(project.link);
@@ -73,6 +79,7 @@ const ProjectTemplate: React.FC<ProjectTemplateProps> = ({ project }) => {
 						))}
 					</div>
 				)}
+				<NextProjectLink project={nextProject} />
 			</Container>
 		</Layout>
 	);
@@ -82,12 +89,17 @@ export default ProjectTemplate;
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
 	const slug = params.slug.toString() || null;
-	const response = await getProjects(slug);
-	const project = response[0];
+	const response = await getProjects();
+
+	const projects = sortProjects(response);
+	const project = projects.find(project => project.slug === slug);
+	const projectIndex = projects.indexOf(project);
+	const nextProject = projects[projectIndex + 1] || projects[0];
 
 	return {
 		props: {
 			project,
+			nextProject,
 		},
 	};
 };

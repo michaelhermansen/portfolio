@@ -1,0 +1,22 @@
+@use '../utils' as *;
+
+.link {
+	display: flex;
+	border-radius: base(1);
+	overflow: hidden;
+	background-color: color(_foreground, 0.75);
+	height: base(8);
+	align-items: center;
+
+	img {
+		height: 100%;
+	}
+
+	& > * {
+		flex: 1;
+	}
+}
+
+.info {
+	padding: 0 base(5);
+}
