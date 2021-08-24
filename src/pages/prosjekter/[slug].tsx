@@ -100,6 +100,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 		props: {
 			project,
 			nextProject,
+			key: project.slug,
 		},
 	};
 };
