@@ -9,7 +9,7 @@ interface NextProjectLinkProps {
 
 const NextProjectLink: React.FC<NextProjectLinkProps> = ({ project }) => {
 	return (
-		<Link href={`/prosjekter/${project.slug}`} scroll={false}>
+		<Link href={`/prosjekter/${project.slug}`}>
 			<a className={classes.link}>
 				<CmsImage
 					src={project.thumbnail.fields.file.url}

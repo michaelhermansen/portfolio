@@ -4,11 +4,11 @@ import Container from "@components/Container";
 import Layout from "@components/Layout";
 import getProjects from "@lib/getProjects";
 import formatProjectLink from "@lib/formatProjectLink";
+import sortProjects from "@lib/sortProjects";
+import NextProjectLink from "@components/NextProjectLink";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { IProjectFields } from "types/contentful";
 import { MdOpenInNew as NewTab } from "react-icons/md";
-import sortProjects from "@lib/sortProjects";
-import NextProjectLink from "@components/NextProjectLink";
 
 interface ProjectTemplateProps {
 	project: IProjectFields;
