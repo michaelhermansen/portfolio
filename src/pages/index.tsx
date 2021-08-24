@@ -11,7 +11,7 @@ import { IProjectFields } from "types/contentful";
 const stagger = {
 	animate: {
 		transition: {
-			delayChildren: 0.2,
+			delayChildren: 0.1,
 			staggerChildren: 0.1,
 		},
 	},
