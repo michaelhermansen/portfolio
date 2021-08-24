@@ -3,7 +3,8 @@
 // Reset
 
 ::selection {
-	background: color(_accent, 0.5);
+	background: color(_accent);
+	color: color(_background);
 }
 
 * {
@@ -21,6 +22,7 @@
 	font-size: inherit;
 	font-weight: inherit;
 	line-height: inherit;
+	-webkit-tap-highlight-color: transparent;
 }
 
 html,

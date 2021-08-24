@@ -3,19 +3,11 @@
 // Farger
 
 $colors: (
-	_text: #dbdbeb,
-	_foreground: #343441,
+	_text: #e8e8f1,
+	_foreground: #353546,
 	_background: #1c1c20,
-	_accent: #00ff95,
+	_accent: #3bffd5,
 );
-
-// alt. tema
-// $colors: (
-// 	_text: #1a1a1d,
-// 	_foreground: #e8e8f0,
-// 	_background: #ffffff,
-// 	_accent: #00ff95,
-// );
 
 @function color($color, $opacity: 1) {
 	@if ($opacity < 0 or $opacity > 1) {
