@@ -1,22 +1,69 @@
 @use '../utils' as *;
 
 .link {
-	display: flex;
-	border-radius: base(1);
-	overflow: hidden;
-	background-color: color(_foreground, 0.75);
-	height: base(8);
-	align-items: center;
+	$image-height-small: base(10);
+	$image-height-large: base(15);
 
-	img {
-		height: 100%;
+	display: block;
+	position: relative;
+	text-decoration: none;
+	padding-top: base(1);
+	box-shadow: 0 -1px 0 color(_foreground, 0.25);
+	@include if-wider-than(_phone) {
+		margin-top: base(1);
+		padding-top: base(2);
 	}
 
-	& > * {
-		flex: 1;
+	img {
+		height: $image-height-small;
+		object-position: 20% 20%;
+		border-radius: base(1) base(1) 0 0;
+		opacity: 0.75;
+		transition: opacity 0.2s;
+		@include if-wider-than(_phone) {
+			height: $image-height-large;
+		}
+	}
+
+	&:hover img {
+		opacity: 1;
+	}
+
+	&::after {
+		content: "";
+		display: block;
+		height: $image-height-small;
+		width: 100%;
+		position: absolute;
+		bottom: 0;
+		z-index: 500;
+		background-image: linear-gradient(
+			to top,
+			color(_background),
+			transparent
+		);
+		@include if-wider-than(_phone) {
+			height: $image-height-large;
+		}
 	}
 }
 
 .info {
-	padding: 0 base(5);
+	padding: base(1);
+	display: flex;
+	align-items: baseline;
+	flex-direction: column;
+
+	@include if-wider-than(_tablet-portrait) {
+		flex-direction: row;
+		gap: base(1);
+	}
+
+	p:first-of-type {
+		opacity: 0.5;
+	}
+
+	.title {
+		@include font(_heading, _medium, _medium);
+	}
 }
