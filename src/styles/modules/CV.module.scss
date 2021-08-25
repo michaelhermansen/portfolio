@@ -1,0 +1,63 @@
+@use '../utils' as *;
+
+.cv_container {
+	background: color(_foreground, 0.5);
+	padding: base(1) base(1);
+	border-radius: base(1);
+}
+
+.cv_bio {
+	display: flex;
+	gap: base(0.75);
+	align-items: center;
+	padding-top: base(1);
+
+	img {
+		max-width: base(5);
+		border-radius: 999px;
+	}
+
+	.name {
+		@include font(_heading, _medium, _medium);
+		line-height: 1.1;
+	}
+
+	.birth {
+		opacity: 0.5;
+		padding-top: base(0.25);
+	}
+}
+
+.cv_content {
+	padding-top: base(2);
+
+	> section {
+		padding-bottom: base(2);
+	}
+
+	h3 {
+		@include font(_heading, _medium, _bold);
+		padding-top: base(2);
+		padding-bottom: base(1);
+		box-shadow: 0 -1px 0 color(_text, 0.05);
+	}
+
+	.skill_list {
+		padding-left: base(1);
+		list-style: disc;
+	}
+}
+
+.cv_entry {
+	padding-bottom: base(1);
+	color: color(_text, 0.5);
+
+	.main {
+		color: color(_text);
+		@include font(_body, _normal, _medium);
+	}
+
+	&:last-of-type {
+		padding-bottom: 0;
+	}
+}

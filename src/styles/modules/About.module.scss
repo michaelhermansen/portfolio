@@ -1,0 +1,12 @@
+@use '../utils' as *;
+
+.page_title {
+	@include font(_heading, _large, _bold);
+	margin-bottom: base(1);
+}
+
+.content {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: base(1);
+}

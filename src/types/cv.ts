@@ -1,53 +1,20 @@
 export interface EducationEntry {
 	title: string;
 	school: string;
-	from: {
-		year: number;
-		month: string;
-	};
-	to:
-		| {
-				year: number;
-				month: string;
-		  }
-		| {
-				now: true;
-		  };
+	duration: string;
 }
 
 export interface WorkEntry {
 	role: string;
 	employer: string;
 	info: string;
-	from: {
-		year: number;
-		month: string;
-	};
-	to:
-		| {
-				year: number;
-				month: string;
-		  }
-		| {
-				now: true;
-		  };
+	duration: string;
 }
 
 export interface VoluntaryEntry {
 	title: string;
 	info: string;
-	from: {
-		year: number;
-		month: string;
-	};
-	to:
-		| {
-				year: number;
-				month: string;
-		  }
-		| {
-				now: true;
-		  };
+	duration: string;
 }
 
 export default interface CV {
