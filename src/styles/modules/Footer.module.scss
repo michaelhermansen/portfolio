@@ -18,12 +18,15 @@
 	.links {
 		display: flex;
 		gap: base(1);
+		flex-wrap: wrap;
+		justify-content: center;
 
 		a {
+			text-decoration: none;
 			color: color(_text, 0.5);
-			transition: color 0.2s;
+			transition: color 0.1s;
 			&:hover {
-				color: color(_text);
+				color: color(_text, 0.75);
 			}
 		}
 	}
