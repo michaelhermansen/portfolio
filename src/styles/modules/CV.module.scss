@@ -1,34 +1,37 @@
 @use '../utils' as *;
 
+.page_title {
+	@include font(_heading, _medium);
+	margin-top: base(2);
+	margin-bottom: base(1);
+	line-height: base(1);
+	color: color(_text, 0.5);
+	display: flex;
+	align-items: center;
+	gap: base(1);
+
+	&::after {
+		content: "";
+		display: block;
+		width: 100%;
+		height: 1px;
+		background: color(_foreground, 0.5);
+	}
+}
+
 .cv_grid {
 	display: grid;
-	gap: base(2);
 	grid-template-columns: 1fr;
+	padding-top: base(0);
+	gap: base(2);
 
 	@include if-wider-than(_tablet-landscape) {
-		grid-template-columns: 3fr 4fr;
+		grid-template-columns: 2fr 3fr;
+		gap: base(4);
 	}
 }
 
 .cv_content {
-	padding: 0 base(0.5);
-
-	h1 {
-		@include font(_heading, _medium);
-		color: color(_text, 0.5);
-		display: flex;
-		align-items: center;
-		gap: base(1);
-
-		&::after {
-			content: "";
-			display: block;
-			width: 100%;
-			height: 1px;
-			background: color(_foreground, 0.5);
-		}
-	}
-
 	h2 {
 		margin-top: base(2);
 		margin-bottom: base(1);
@@ -53,8 +56,6 @@
 .cv_entry {
 	margin-bottom: base(1.5);
 	margin-top: base(1);
-	padding-left: base(1);
-	box-shadow: -1px 0 0 color(_foreground, 0.5);
 
 	& > p:nth-of-type(1) {
 		opacity: 0.5;

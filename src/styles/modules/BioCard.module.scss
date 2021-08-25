@@ -1,10 +1,8 @@
 @use '../utils' as *;
 
 .bio_card {
-	background: color(_foreground, 0.5);
-	border-radius: base(1);
-	padding: base(2) base(0.5);
-	text-align: center;
+	padding-bottom: base(1);
+	padding-top: base(2);
 
 	h2 {
 		margin-left: base(0.5);
@@ -14,7 +12,7 @@
 }
 
 .bio_top {
-	display: grid;
+	display: flex;
 	place-items: center;
 	gap: base(1);
 	padding: base(0.5) 0;
