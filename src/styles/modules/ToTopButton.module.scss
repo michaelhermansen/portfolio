@@ -1,17 +1,5 @@
-@use '../utils' as *;
+@use '../reusable' as *;
 
 .toTopButton {
-	display: flex;
-	align-items: center;
-	gap: base(0.25);
-	height: base(2);
-	padding: 0 base(1);
-	border-radius: 999px;
-	white-space: nowrap;
-	background: color(_foreground, 0.75);
-	transition: background-color 0.2s;
-
-	&:hover {
-		background: color(_foreground);
-	}
+	@include button-styles;
 }

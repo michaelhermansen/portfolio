@@ -16,6 +16,7 @@
 		"jsx": "preserve",
 		"baseUrl": "src/",
 		"paths": {
+			"@fixtures/*": ["./fixtures/*"],
 			"@components/*": ["./components/*"],
 			"@modules/*": ["./styles/modules/*"],
 			"@lib/*": ["./lib/*"]

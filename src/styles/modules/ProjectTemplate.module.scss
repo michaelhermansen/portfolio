@@ -1,4 +1,5 @@
 @use '../utils' as *;
+@use '../reusable' as *;
 
 .thumbnail {
 	border-radius: base(1);
@@ -35,14 +36,8 @@
 .links {
 	@include font(_body, _normal);
 	a {
+		@include button-styles;
 		display: inline-flex;
-		gap: base(0.5);
-		align-items: center;
-		text-decoration: none;
-		border-radius: 999px;
-		padding: base(0.5) base(1);
-		background: color(_foreground, 0.75);
-		transition: background-color 0.2s;
 
 		margin: {
 			bottom: base(0.5);
@@ -53,10 +48,6 @@
 				bottom: base(1);
 				right: 0;
 			}
-		}
-
-		&:hover {
-			background: color(_foreground);
 		}
 	}
 }

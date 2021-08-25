@@ -1,0 +1,56 @@
+@use '../utils' as *;
+
+.bio_card {
+	background: color(_foreground, 0.5);
+	border-radius: base(1);
+	padding: base(2) base(0.5);
+	text-align: center;
+
+	h2 {
+		margin-left: base(0.5);
+		margin-right: base(0.5);
+		text-align: left;
+	}
+}
+
+.bio_top {
+	display: grid;
+	place-items: center;
+	gap: base(1);
+	padding: base(0.5) 0;
+
+	img {
+		max-width: base(4);
+		border-radius: 999px;
+	}
+
+	.name {
+		@include font(_heading, _medium, _medium);
+		line-height: 1.2;
+		padding-bottom: base(0.25);
+	}
+
+	.birth {
+		color: color(_text, 0.5);
+	}
+}
+
+.contact_info {
+	margin-top: base(1);
+	display: grid;
+	gap: base(0.5);
+
+	li a {
+		text-decoration: none;
+		border-radius: base(0.25);
+		color: color(_text);
+		display: inline-block;
+		padding: base(0.5);
+		background: color(_text, 0.075);
+		transition: background-color 0.2s;
+
+		&:hover {
+			background: color(_text, 0.1);
+		}
+	}
+}
