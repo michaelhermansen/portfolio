@@ -1,9 +1,10 @@
 {
-	"name": "portfolio",
-	"version": "0.1.0",
+	"name": "michaelhermansen.no",
+	"author": "Michael Hermansen",
+	"version": "1.0.0",
 	"private": true,
 	"scripts": {
-		"dev": "next dev -p 3005",
+		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
 		"lint": "next lint",
