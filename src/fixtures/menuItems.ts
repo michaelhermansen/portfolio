@@ -6,8 +6,8 @@ interface MenuItem {
 
 const menuItems: MenuItem[] = [
 	{
-		label: "Kontakt",
-		url: "/kontakt",
+		label: "Om meg",
+		url: "/om-meg",
 		newTab: false,
 	},
 	{
