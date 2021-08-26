@@ -52,6 +52,7 @@ const Header = () => {
 					</a>
 				</Link>
 				<button
+					aria-label="meny"
 					className={classes.menu_button}
 					onClick={() => setMenuIsOpen(current => !current)}
 				>
