@@ -4,7 +4,10 @@ const BioCard = () => {
 	return (
 		<div className={classes.bio_card}>
 			<div className={classes.bio_top}>
-				<img src="/assets/portrait.jpg" alt="…" />
+				<img
+					src="/assets/portrait.jpg"
+					alt="Portrett av Michael Hermansen"
+				/>
 				<div>
 					<p className={classes.name}>Michael Hermansen</p>
 					<p className={classes.birth}>17. juli 1998</p>

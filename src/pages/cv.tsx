@@ -6,7 +6,10 @@ import cv from "@fixtures/cv";
 
 const CV = () => {
 	return (
-		<Layout title="CV" description="…">
+		<Layout
+			title="CV"
+			description="CV og kontaktinformasjon. E-post: michael.p.hermansen@gmail.com, tlf.: +47 406 10 143."
+		>
 			<Container>
 				<h1 className={classes.page_title}>CV</h1>
 				<div className={classes.cv_grid}>

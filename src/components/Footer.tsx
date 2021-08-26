@@ -2,7 +2,7 @@ import classes from "@modules/Footer.module.scss";
 import Container from "./Container";
 import menuItems from "fixtures/menuItems";
 import Link from "next/link";
-import ToTopButton from "./ToTopButton";
+import { MdArrowUpward } from "react-icons/md";
 
 const currentYear = new Date().getFullYear();
 
@@ -23,7 +23,18 @@ const Footer = () => {
 							</Link>
 						))}
 					</div>
-					<ToTopButton />
+					<button
+						onClick={() =>
+							window.scrollTo({
+								top: 0,
+								behavior: "smooth",
+							})
+						}
+						className={classes.toTopButton}
+					>
+						Til toppen
+						<MdArrowUpward className="global__button" />
+					</button>
 				</div>
 			</Container>
 		</footer>

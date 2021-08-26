@@ -3,7 +3,6 @@
 .page_title {
 	@include font(_heading, _medium);
 	margin-top: base(2);
-	margin-bottom: base(1);
 	line-height: base(1);
 	color: color(_text, 0.5);
 	display: flex;
@@ -23,7 +22,7 @@
 	display: grid;
 	grid-template-columns: 1fr;
 	padding-top: base(0);
-	gap: base(2);
+	gap: base(0);
 
 	@include if-wider-than(_tablet-landscape) {
 		grid-template-columns: 2fr 3fr;
@@ -34,9 +33,9 @@
 .cv_content {
 	h2 {
 		margin-top: base(2);
-		margin-bottom: base(1);
-
+		margin-bottom: base(0.5);
 		@include font(_heading, _large, _medium);
+
 		@include if-wider-than(_phone) {
 			@include font(_heading, _large, _medium);
 		}
@@ -46,19 +45,21 @@
 .skill_list {
 	padding-left: base(1);
 	list-style: disc;
-	li {
+	list li {
 		@include font(_body, _medium);
 		line-height: 1.6;
-		padding-left: base(0.25);
 	}
 }
 
 .cv_entry {
 	margin-bottom: base(1.5);
 	margin-top: base(1);
+	padding-left: base(0.75);
+	margin-left: base(0.25);
+	box-shadow: -1px 0 0 color(_foreground, 0.5);
 
 	& > p:nth-of-type(1) {
-		opacity: 0.5;
+		color: color(_text, 0.5);
 	}
 
 	& > p:nth-of-type(2) {
