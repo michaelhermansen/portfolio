@@ -11,13 +11,13 @@ const menuItems: MenuItem[] = [
 		newTab: false,
 	},
 	{
-		label: "LinkedIn",
-		url: "https://www.linkedin.com/in/michael-hermansen",
+		label: "GitHub",
+		url: "https://github.com/michaelhermansen",
 		newTab: true,
 	},
 	{
-		label: "GitHub",
-		url: "https://github.com/michaelhermansen",
+		label: "LinkedIn",
+		url: "https://www.linkedin.com/in/michael-hermansen",
 		newTab: true,
 	},
 ];
