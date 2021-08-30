@@ -4,9 +4,9 @@ const cv: CV = {
 	skills: [
 		"JavaScript/TypeScript",
 		"React/Next.js",
-		"HTML",
 		"MongoDB/Mongoose",
-		"CSS/SCSS",
+		"HTML og CSS/SCSS",
+		"Git/GitHub",
 		"Figma",
 		"Adobe Xd",
 		"Adobe Illustrator",
