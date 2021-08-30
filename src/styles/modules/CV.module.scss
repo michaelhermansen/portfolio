@@ -45,9 +45,10 @@
 .skill_list {
 	padding-left: base(1);
 	list-style: disc;
+	line-height: 1.6;
+
 	list li {
 		@include font(_body, _medium);
-		line-height: 1.6;
 	}
 }
 

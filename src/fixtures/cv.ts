@@ -5,6 +5,7 @@ const cv: CV = {
 		"JavaScript/TypeScript",
 		"React/Next.js",
 		"HTML",
+		"MongoDB/Mongoose",
 		"CSS/SCSS",
 		"Figma",
 		"Adobe Xd",
@@ -33,20 +34,21 @@ const cv: CV = {
 		{
 			role: "Butikkmedarbeider",
 			employer: "Coop Mega Sjølyst",
-			info: "Post, kasse og generelt butikkarbeid",
+			info:
+				"Post, kasse og generelt butikkarbeid (21% stilling pluss ekstravikar).",
 			duration: "August 2017–Nå",
 		},
 		{
 			role: "Butikkmedarbeider",
 			employer: "Extra Glommen Brygge",
-			info: "Kasse og generelt butikkarbeid",
+			info: "Kasse og generelt butikkarbeid (ekstravikar).",
 			duration: "Juni 2016–Juli 2017",
 		},
 	],
 	voluntary: [
 		{
 			title: "Nettside for Dressingfabrikken",
-			info: "Designet og utviklet nettsiden dressingfabrikken.no",
+			info: "Designet og utviklet dressingfabrikken.no.",
 			duration: "Mars 2019",
 		},
 		{
