@@ -15,11 +15,6 @@ const cv: CV = {
 	],
 	education: [
 		{
-			title: "Matematikk R1",
-			school: "ASK Privatist",
-			duration: "Januar 2020–Nå",
-		},
-		{
 			title: "Bachelor i grafisk design",
 			school: "Høyskolen Kristiania",
 			duration: "August 2017–Mai 2020",
@@ -32,11 +27,18 @@ const cv: CV = {
 	],
 	work: [
 		{
+			role: "Interaksjonsdesigner og teknolog",
+			employer: "Netlife",
+			info:
+				"Design og utvikling av nettsider og web-applikasjoner (heltid).",
+			duration: "November 2021–Nå",
+		},
+		{
 			role: "Butikkmedarbeider",
 			employer: "Coop Mega Sjølyst",
 			info:
 				"Post, kasse og generelt butikkarbeid (21% stilling pluss ekstravikar).",
-			duration: "August 2017–Nå",
+			duration: "August 2017–November 2021",
 		},
 		{
 			role: "Butikkmedarbeider",

@@ -25,6 +25,16 @@ const CV = () => {
 						</div>
 					</aside>
 					<div className={classes.cv_content}>
+						<h2>Arbeidserfaring</h2>
+						{cv.work.map((item, i) => (
+							<div key={i} className={classes.cv_entry}>
+								<p>{item.duration}:</p>
+								<p>
+									{item.role}, {item.employer}
+								</p>
+								<p>{item.info}</p>
+							</div>
+						))}
 						<h2>Utdanning</h2>
 						{cv.education.map((item, i) => (
 							<div key={i} className={classes.cv_entry}>
@@ -38,16 +48,6 @@ const CV = () => {
 							<div key={i} className={classes.cv_entry}>
 								<p>{item.duration}:</p>
 								<p>{item.title}</p>
-								<p>{item.info}</p>
-							</div>
-						))}
-						<h2>Arbeidserfaring</h2>
-						{cv.work.map((item, i) => (
-							<div key={i} className={classes.cv_entry}>
-								<p>{item.duration}:</p>
-								<p>
-									{item.role}, {item.employer}
-								</p>
 								<p>{item.info}</p>
 							</div>
 						))}
