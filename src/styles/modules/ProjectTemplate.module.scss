@@ -21,7 +21,7 @@
 
 .info {
 	@include font(_body, _normal);
-	color: color(_text, 0.5);
+	color: color(_text, 0.6);
 	padding-bottom: base(1);
 	@include if-wider-than(_phone) {
 		@include font(_body, _normal);
