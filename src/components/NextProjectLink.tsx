@@ -1,7 +1,7 @@
 import classes from "@modules/NextProjectLink.module.scss";
 import Link from "next/link";
 import { IProjectFields } from "types/contentful";
-import CmsImage from "./CmsImage";
+import Image from "./Image";
 
 interface NextProjectLinkProps {
 	project: IProjectFields;
@@ -15,10 +15,12 @@ const NextProjectLink: React.FC<NextProjectLinkProps> = ({ project }) => {
 					<p>Neste prosjekt:</p>
 					<p className={classes.title}>{project.title}</p>
 				</div>
-				<CmsImage
+				<Image
 					src={project.thumbnail.fields.file.url}
 					alt={project.thumbnail.fields.description}
 					width={1400}
+					aspectRatio={16 / 9}
+					fromCMS
 				/>
 			</a>
 		</Link>

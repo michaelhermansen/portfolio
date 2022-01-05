@@ -1,7 +1,7 @@
 import classes from "@modules/ProjectLink.module.scss";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import CmsImage from "./CmsImage";
+import Image from "./Image";
 import { IProjectFields } from "types/contentful";
 import shortString from "@lib/shortString";
 
@@ -35,11 +35,13 @@ const ProjectLink: React.FC<ProjectLinkProps> = ({ project }) => {
 		>
 			<Link href={`/prosjekter/${project.slug}`}>
 				<a>
-					<CmsImage
+					<Image
 						className={classes.thumbnail}
 						src={project.thumbnail.fields.file.url}
 						alt={project.thumbnail.fields.description}
 						width={800}
+						aspectRatio={4 / 3}
+						fromCMS
 					/>
 					<div className={classes.info}>
 						<div>

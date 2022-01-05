@@ -11,22 +11,13 @@
 .thumbnail {
 	border-radius: base(1);
 	object-position: 25% 25%;
-	aspect-ratio: 4/3;
-
-	// aspect-ratio fallback
-	@supports not (aspect-ratio: 4/3) {
-		height: base(13);
-		@include if-wider-than(_phone) {
-			height: base(15);
-		}
-	}
 }
 
 .info {
 	display: flex;
 	justify-content: space-between;
 	gap: base(1);
-	padding: base(1) base(0.5);
+	padding: base(0.5) base(0.5);
 
 	div {
 		width: 0;

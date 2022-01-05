@@ -1,12 +1,15 @@
 import classes from "@modules/BioCard.module.scss";
+import Image from "./Image";
 
 const BioCard = () => {
 	return (
 		<div className={classes.bio_card}>
 			<div className={classes.bio_top}>
-				<img
+				<Image
 					src="/assets/portrait.jpg"
 					alt="Portrett av Michael Hermansen"
+					width={100}
+					aspectRatio={1}
 				/>
 				<div>
 					<p className={classes.name}>Michael Hermansen</p>
