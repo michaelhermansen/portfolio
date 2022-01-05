@@ -1,0 +1,5 @@
+@use '../utils' as *;
+
+.image {
+	background-color: color(_foreground, 0.5);
+}

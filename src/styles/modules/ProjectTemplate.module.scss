@@ -4,12 +4,6 @@
 .thumbnail {
 	border-radius: base(1);
 	object-position: 25% 25%;
-	margin-bottom: base(2);
-	aspect-ratio: 4/3;
-
-	@include if-wider-than(_tablet-landscape) {
-		aspect-ratio: 2/1;
-	}
 }
 
 .title {
@@ -19,6 +13,7 @@
 	overflow: hidden;
 	text-overflow: ellipsis;
 	margin-left: -1px;
+	margin-top: base(1);
 	@include if-wider-than(_phone) {
 		@include font(_heading, _xlarge, _bold);
 	}

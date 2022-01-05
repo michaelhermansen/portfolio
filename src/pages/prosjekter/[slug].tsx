@@ -1,5 +1,5 @@
 import classes from "@modules/ProjectTemplate.module.scss";
-import CmsImage from "@components/CmsImage";
+import Image from "@components/Image";
 import Container from "@components/Container";
 import Layout from "@components/Layout";
 import getProjects from "@lib/getProjects";
@@ -26,11 +26,13 @@ const ProjectTemplate: React.FC<ProjectTemplateProps> = ({
 	return (
 		<Layout title={project.title} description={project.blurb}>
 			<Container wide>
-				<CmsImage
+				<Image
 					className={classes.thumbnail}
 					src={project.thumbnail.fields.file.url}
 					alt={project.thumbnail.fields.description}
 					width={1400}
+					aspectRatio={16 / 9}
+					fromCMS
 				/>
 			</Container>
 			<Container>
@@ -70,11 +72,13 @@ const ProjectTemplate: React.FC<ProjectTemplateProps> = ({
 				{project.images && (
 					<div className={classes.images}>
 						{project.images.map((image, i) => (
-							<CmsImage
+							<Image
 								key={i}
 								src={image.fields.file.url}
 								alt={image.fields.description}
 								width={1200}
+								aspectRatio={16 / 10}
+								fromCMS
 							/>
 						))}
 					</div>
