@@ -13,6 +13,7 @@ const Layout: React.FC<LayoutProps> = ({ title, description, children }) => {
 	return (
 		<>
 			<Head>
+				<html lang="no" />
 				<title>{title} — Michael Hermansen</title>
 				<meta name="description" content={description} />
 			</Head>
