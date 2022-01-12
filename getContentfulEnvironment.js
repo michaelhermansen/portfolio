@@ -1,4 +1,4 @@
-// Automaisk generere typescript typer fra contentful
+// Automatisk generere typescript typer fra contentful
 // som kan importeres fra 'types/contentful':
 // npm run generate-contentful-types
 
