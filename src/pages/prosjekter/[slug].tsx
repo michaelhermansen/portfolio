@@ -27,6 +27,7 @@ const ProjectTemplate: React.FC<ProjectTemplateProps> = ({
 		<Layout title={project.title} description={project.blurb}>
 			<Container wide>
 				<Image
+					priority
 					className={classes.thumbnail}
 					src={project.thumbnail.fields.file.url}
 					alt={project.thumbnail.fields.description}
