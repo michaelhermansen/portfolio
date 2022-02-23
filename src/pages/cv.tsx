@@ -15,14 +15,6 @@ const CV = () => {
 				<div className={classes.cv_grid}>
 					<aside>
 						<BioCard />
-						{/* <div className={classes.cv_content}>
-							<h2>Ferdigheter</h2>
-							<ul className={classes.skill_list}>
-								{cv.skills.map((item, i) => (
-									<li key={i}>{item}</li>
-								))}
-							</ul>
-						</div> */}
 					</aside>
 					<div className={classes.cv_content}>
 						<h2>Arbeidserfaring</h2>

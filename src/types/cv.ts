@@ -18,7 +18,6 @@ export interface VoluntaryEntry {
 }
 
 export default interface CV {
-	skills: string[];
 	education: EducationEntry[];
 	work: WorkEntry[];
 	voluntary: VoluntaryEntry[];

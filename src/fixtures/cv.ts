@@ -1,16 +1,6 @@
 import CV from "types/cv";
 
 const cv: CV = {
-	skills: [
-		"TypeScript",
-		"React/Next.js",
-		"Express",
-		"Figma",
-		"Adobe Xd",
-		"Adobe Illustrator",
-		"Adobe Photoshop",
-		"Adobe InDesign",
-	],
 	education: [
 		{
 			title: "Bachelor i grafisk design",
