@@ -24,7 +24,11 @@ const ProjectTemplate: React.FC<ProjectTemplateProps> = ({
 	const projectLink = project.link && formatProjectLink(project.link);
 
 	return (
-		<Layout title={project.title} description={project.blurb}>
+		<Layout
+			title={project.title}
+			description={project.blurb}
+			ogImageSrc={project.thumbnail.fields.file.url}
+		>
 			<Container wide>
 				<Image
 					priority

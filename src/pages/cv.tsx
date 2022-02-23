@@ -8,7 +8,9 @@ const CV = () => {
 	return (
 		<Layout
 			title="CV"
-			description="CV og kontaktinformasjon. E-post: michael.p.hermansen@gmail.com, tlf.: +47 406 10 143."
+			description={`Jobber for øyeblikket som
+				${cv.work[0].role.toLocaleLowerCase()} hos
+				${cv.work[0].employer}.`}
 		>
 			<Container>
 				<h1 className={classes.page_title}>CV</h1>

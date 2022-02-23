@@ -25,7 +25,7 @@ const Home: React.FC<HomeProps> = ({ projects }) => {
 	return (
 		<Layout
 			title="Portefølje"
-			description="Michael Hermansen, designer og utvikler med bachelorgrad i grafisk design fra Høyskolen Kristiania."
+			description="Designer og utvikler hos Netlife, med bachelorgrad i grafisk design fra Høyskolen Kristiania."
 		>
 			<Container wide>
 				<motion.ul className={classes.project_grid} variants={stagger}>
