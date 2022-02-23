@@ -2,11 +2,9 @@ import CV from "types/cv";
 
 const cv: CV = {
 	skills: [
-		"JavaScript/TypeScript",
+		"TypeScript",
 		"React/Next.js",
-		"MongoDB/Mongoose",
-		"HTML og CSS/SCSS",
-		"Git/GitHub",
+		"Express",
 		"Figma",
 		"Adobe Xd",
 		"Adobe Illustrator",
