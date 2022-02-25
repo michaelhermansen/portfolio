@@ -1,15 +1,20 @@
 import "../styles/global.scss";
 import smoothscroll from "smoothscroll-polyfill";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Head from "next/head";
+import Analytics from "@components/Analytics";
 
 const MyApp = ({ Component, pageProps }) => {
+	const [pageHasLoaded, setPageHasLoaded] = useState(false);
+
 	useEffect(() => {
+		setPageHasLoaded(true);
 		smoothscroll.polyfill();
 	}, []);
 
 	return (
 		<>
+			{pageHasLoaded && <Analytics />}
 			<Head>
 				<link
 					rel="apple-touch-icon"
