@@ -1,0 +1,23 @@
+@use "../utils" as *;
+@use "../reusable" as *;
+
+.wrapper {
+  border: 1px solid color(_foreground);
+  text-align: center;
+  padding: base(3) base(1);
+  max-width: base(32);
+  margin: base(3) auto base(6) auto;
+  border-radius: base(1);
+  @include font(_mono, _normal)
+}
+
+.page_title {
+  @include font(_mono, _xlarge)
+}
+
+.home_link {
+  @include button-styles;
+  @include font(_body, _normal);
+  margin: base(2) auto 0 auto;
+  max-width: max-content;
+}

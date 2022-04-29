@@ -11,7 +11,10 @@ $font-families: (
 		"Inter",
 		sans-serif,
 	),
-	_mono: monospace,
+	_mono: (
+		"Roboto Mono",
+		monospace,
+	)
 );
 
 $font-sizes: (
