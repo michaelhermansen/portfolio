@@ -10,6 +10,7 @@ const BioCard = () => {
 					alt="Portrett av Michael Hermansen"
 					width={100}
 					aspectRatio={1}
+					priority
 				/>
 				<div>
 					<p className={classes.name}>Michael Hermansen</p>
