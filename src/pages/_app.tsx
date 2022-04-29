@@ -10,6 +10,10 @@ const MyApp = ({ Component, pageProps }) => {
 
 	return (
 		<>
+			<noscript>
+				{/* Make sure everything is visible even if javascript is disabled  */}
+				<style>{`* { opacity: unset !important; transform: unset !important; }`}</style>
+			</noscript>
 			<Head>
 				<link
 					rel="apple-touch-icon"
