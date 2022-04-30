@@ -21,7 +21,7 @@ const Image: React.FC<CmsImageProps> = ({
 	...rest
 }) => {
 	const imageSource = fromCMS
-		? `https:${src}?fm=webp${width ? `&w=${width + 6}` : ""}`
+		? `https:${src}?fm=webp${width ? `&w=${width}` : ""}`
 		: src;
 
 	const blurDataUrl = fromCMS ? `https:${src}?fm=webp&w=10` : null;
