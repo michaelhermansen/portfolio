@@ -16,6 +16,7 @@ const NextProjectLink: React.FC<NextProjectLinkProps> = ({ project }) => {
 					<p className={classes.title}>{project.title}</p>
 				</div>
 				<Image
+					className={classes.image}
 					src={project.thumbnail.fields.file.url}
 					alt={project.thumbnail.fields.description}
 					width={1400}

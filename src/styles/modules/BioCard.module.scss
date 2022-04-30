@@ -17,7 +17,7 @@
 	gap: base(1);
 	padding: base(0.5) 0;
 
-	img {
+	.image {
 		$img-size: base(4);
 		width: $img-size;
 		height: $img-size;

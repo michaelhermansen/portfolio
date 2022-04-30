@@ -6,6 +6,7 @@ const BioCard = () => {
 		<div className={classes.bio_card}>
 			<div className={classes.bio_top}>
 				<Image
+					className={classes.image}
 					src="/assets/portrait.jpg"
 					alt="Portrett av Michael Hermansen"
 					width={100}

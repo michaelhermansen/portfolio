@@ -21,36 +21,29 @@ const Image: React.FC<CmsImageProps> = ({
 	...rest
 }) => {
 	const imageSource = fromCMS
-		? `https:${src}?fm=webp${width ? `&w=${width}` : ""}`
+		? `https:${src}?fm=webp${width ? `&w=${width + 6}` : ""}`
 		: src;
 
+	const blurDataUrl = fromCMS ? `https:${src}?fm=webp&w=10` : null;
+
 	return (
-		<NextImage
-			className={classNames(classes.image, className)}
-			src={imageSource}
-			alt={alt}
-			width={width}
-			height={width / aspectRatio}
-			objectFit="cover"
-			{...rest}
-		/>
+		<div
+			className={classNames(classes.image_wrapper, className)}
+			style={{ maxWidth: `${width}px` }}
+		>
+			<NextImage
+				className={classNames(classes.image, className)}
+				src={imageSource}
+				placeholder={blurDataUrl ? "blur" : "empty"}
+				blurDataURL={blurDataUrl}
+				alt={alt}
+				width={width}
+				height={width / aspectRatio}
+				objectFit="cover"
+				{...rest}
+			/>
+		</div>
 	);
 };
 
 export default Image;
-
-// <picture>
-// 	{/* Bilde i webp-format */}
-// 	<source
-// 		srcSet={`${src}?fm=webp${width ? `&w=${width}` : ""}`}
-// 		type="image/webp"
-// 	/>
-// 	{/* Faller tilbake på jpeg-format */}
-// 	<source
-// 		srcSet={`${src}?fm=jpg&fl=progressive${
-// 			width ? `&w=${width}` : ""
-// 		}`}
-// 		type="image/jpeg"
-// 	/>
-// 	<img src={src} alt={alt} {...rest} />
-// </picture>

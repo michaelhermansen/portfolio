@@ -1,5 +1,11 @@
 @use '../utils' as *;
 
+.image_wrapper {
+	line-height: 0;
+	overflow: hidden;
+}
+
 .image {
 	background-color: color(_foreground, 0.5);
+	transition: 0.2s;
 }

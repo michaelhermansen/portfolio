@@ -78,6 +78,7 @@ const ProjectTemplate: React.FC<ProjectTemplateProps> = ({
 					<div className={classes.images}>
 						{project.images.map((image, i) => (
 							<Image
+								className={classes.image}
 								key={i}
 								src={image.fields.file.url}
 								alt={image.fields.description}
